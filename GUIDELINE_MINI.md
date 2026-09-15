@@ -7,7 +7,7 @@
 > người trong nhóm gán khác nhau, gần như luôn là vì file này chưa nói rõ — chứ
 > không phải vì ai kém.
 
-Nhóm / tên: `...`
+Nhóm / tên: `Hoàng Tiến Dũng`
 Clip: `clip_01`, `clip_02`
 
 ---
@@ -29,10 +29,10 @@ Bổ sung của nhóm (nếu có): `...`
 
 | Tình huống | Luật của nhóm | Vì sao |
 | --- | --- | --- |
-| Xe bị che một phần rồi hiện lại | giữ nguyên ID nếu bị che **dưới ... frame** (mặc định của lab: 25 frame = 2 giây @ 12.5 fps) | `...` |
-| Xe bị che lâu hơn ngưỡng trên | `...` | `...` |
-| Xe rời khung hình rồi quay lại | mặc định: **track mới** | `...` |
-| Hai xe cắt nhau / chồng lên nhau | `...` | `...` |
+| Xe bị che một phần rồi hiện lại | giữ nguyên ID nếu bị che **dưới 25 frame** (mặc định của lab: 25 frame = 2 giây @ 12.5 fps) | `đấy là khoảng thời gian không đủ để chiếc xe ra khỏi camera ` |
+| Xe bị che lâu hơn ngưỡng trên | `tạo 1 ID mới ` | `có thể chiếc xe đó đã dừng lại và 1 chiếc xe khác bắt đầu đi từ khoảng bị che ấy` |
+| Xe rời khung hình rồi quay lại | mặc định: **track mới** | `có thể xe giống nhau nhưng chưa chắc đã là 1` |
+| Hai xe cắt nhau / chồng lên nhau | `chỉ track phần hiện ra của mỗi xe ` | `...` |
 
 ## 3. Luật bbox
 
@@ -40,9 +40,9 @@ Bổ sung của nhóm (nếu có): `...`
 | --- | --- |
 | Xe bị cắt bởi rìa ảnh | bbox chạm đúng rìa, không đoán phần ngoài ảnh |
 | Xe bị xe khác che một phần | bbox ôm phần **nhìn thấy được** |
-| Xe vừa xuất hiện, còn rất nhỏ / rất mờ | bắt đầu track từ frame đầu tiên xác định được là xe bốn bánh; ngưỡng nhóm chọn: `...` |
-| Xe đang đỗ, không di chuyển | `...` |
-| Keyframe đặt dày ở đâu | `...` |
+| Xe vừa xuất hiện, còn rất nhỏ / rất mờ | bắt đầu track từ frame đầu tiên xác định được là xe bốn bánh; ngưỡng nhóm chọn: `bắt đầu xác định được xe đó là xe 4 bánh` |
+| Xe đang đỗ, không di chuyển | `vẫn đánh như bình thường` |
+| Keyframe đặt dày ở đâu | `bắt đầu xe xuất hiện và đi qua vật thể có thể che 1 phần xe` |
 
 ## 4. Ít nhất ba ca mơ hồ đã gặp thật
 
